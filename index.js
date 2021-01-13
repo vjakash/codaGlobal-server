@@ -40,8 +40,20 @@ app.listen(port, () => {
 app.use(cors());
 app.use(bodyParser.json());
 //routes imports
-let addall = require('./routes/addall.js');
+let register = require('./routes/register.js');
+let login = require('./routes/login.js');
+let createPost = require('./routes/createPost.js');
+let getPosts = require('./routes/getPosts.js');
+let addLike = require('./routes/addLike.js');
+let unlike = require('./routes/unlike.js');
+let searchUser = require('./routes/searchUser.js');
 
 
 //routes
-app.use('/addall', addall);
+app.use('/register', register);
+app.use('/login', login);
+app.use('/createPost', createPost);
+app.use('/getPosts', getPosts);
+app.use('/addLike', addLike);
+app.use('/unlike', unlike);
+app.use('/searchUser', searchUser);
